@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="./src/js/main.js" defer></script>
+    <title>Bolt Inc.</title>
+</head>
+
+<body>
+    <div class="bolt">
+       
+        <div class="liste">
+           
+            <div>наименование крепежного изделия: Болт <span class="res"></span></div>
+            <input type="text" value="" class="inp_ob inp_rezba" placeholder="резьба">
+            <input type="text" value="" class="inp_ob inp_length" placeholder="длина">
+            <select class='select_one select' name="select_one" id="select_one" onchange="selectChangeOne()">
+                <option class="select_item" value="неопределено" >стандарты и альтернативы</option>
+                <option class="select_item" value="DIN 933">DIN 933</option>
+                <option class="select_item" value="ISO 4017">ISO 4017</option>
+                <option class="select_item" value="ГОСТ 7798-70">ГОСТ 7798-70</option>
+                <option class="select_item" value="ГОСТ 7808-70">ГОСТ 7808-70</option>
+                <option class="select_item" value="ГОСТ 14724-69">ГОСТ 14724-69</option>
+                <option class="select_item" value="ГОСТ 10602-94">ГОСТ 10602-94</option>
+            </select>
+            <select class='select_two select' onchange="selectChangeTwo()">
+                <option value="неопределено">виды покрытия</option>
+                <option value="Цинк">Цинк</option>
+                <option value="Кадмий">Кадмий</option>
+                <option value="опрпр">опрпр</option>
+            </select>
+            <select class='select_three select' onchange="selectChangeThree()">
+                <option value="неопределено">Марка стали</option>
+                <option value="10кп">10кп</option>
+                <option value="20кп">20кп</option>
+                <option value="10,20,35">10,20,35</option>
+                <option value="20Г">20Г</option>
+            </select>
+            <select class='four select' onchange="selectChangeFour()">
+                <option value="неопределено">класс прочности</option>
+                <option value="4.8">4.8</option>
+                <option value="5.8">5.8</option>
+                <option value="8.8">8.8</option>
+                <option value="10.9">10.9</option>
+                <option value="12.9">12.9</option>
+            </select>
+    
+    
+            <p class="hidden">
+                4.8 5.8 Изготавливаются из марок стали 10, 20.
+                Имеют относительно не высокую прочность на разрыв. Болты класса прочности 5.8 выдерживают нагрузки на 20%
+                больше, чем болты класса прочности 4.8.
+                Широко применяются во всех отраслях народного хозяйства для малонагруженных соединений.
+    
+                8.8 Изготавливаются из стали 35, 20Г2Р, 40Х с последующей закалкой.
+                Выдерживают в два раза большее разрушающее воздействие по сравнению с классом прочности 4.8.
+                Рекомендуем применять в ответственных конструкциях и механизмах.
+    
+                10.9 12.9 Изготавливаются только из стали 20Г2Р, 40Х, 30Х3МФ в зависимости от диаметра болта с последующей
+                закалкой.
+                Выдерживают разрушающее воздействие в 2.7 раза больше по сравнению с классом прочности 4.8.
+                Высокий класс прочности позволяет применять крепежные изделия меньшего размера при тех же нагрузках;
+                сократить металлоемкость крепежа и снизить цену на 30-40%.
+                Незаменимы в механизмах, требующих частой с
+                борки-разборки, грузоподъемных машинах и ответственных конструкциях.
+            </p>
+            <button class="btn_save hidden">Создать</button>
+        </div>
+    
+        <form class="form ">
+            <h1 class="title_card">карточка изделия</h1>
+            <div class="title_form">
+                <h2>Наименование: <span class="name_title"></span></h2>
+                <div class="form_item">Стандарт:<span class="standart"></span></div>
+                <div class="form_item">Длина:<span class="item length"></span></div>
+                <div class="form_item">Резьба:<span class="item thread"></span></div>
+                <div class="form_item">Покрытие:<span class="item coating"></span></div>
+                <div class="form_item">Класс прочности:<span class="strength"></span></div>
+                <div class="form_item">Сталь:<span class="item steel"></span></div>
+                <div class="form_item"><span class="item"></span></div>
+                <div class="form_item"><span class="item"></span></div>
+                <div class="form_item"><span class="item"></span></div>
+                <div class="btn_block">
+                    <button class="btn arrow_back">Дополнить</button>
+                    <button class="btn save_card">Сохранить карточку</button>
+                </div>
+            </div>
+  
+        </form>
+
+    </div>
+  
+</body>
+
+</html>
