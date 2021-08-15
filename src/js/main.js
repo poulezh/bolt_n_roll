@@ -1,9 +1,13 @@
-
+let reload = document.querySelector('.btn_reload')
 let inp_rezba = document.querySelector('.inp_rezba')
 let inp_length = document.querySelector('.inp_length')
 let liste = document.querySelector('.liste')
 let res = document.querySelector('.res')
 let form = document.querySelector('.form')
+
+reload.addEventListener('click', ()=>{
+    location.reload()
+})
 
 function selectChangeOne() {
     let select = document.querySelector('.select_one').value   
@@ -40,6 +44,7 @@ function num_one() {
     // }
     if (num1 > 0 && num2 > 0) {
         res.innerHTML = name
+        // reload.classList.add('hidden')
         btn_save.classList.remove('hidden')
         return arr_table
     }

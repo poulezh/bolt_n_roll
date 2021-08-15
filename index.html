@@ -14,10 +14,16 @@
     <div class="bolt">
        
         <div class="liste">
-           
-            <div>наименование крепежного изделия: Болт <span class="res"></span></div>
-            <input type="text" value="" class="inp_ob inp_rezba" placeholder="резьба">
-            <input type="text" value="" class="inp_ob inp_length" placeholder="длина">
+            <div class="div">Наименование изделия: <span>Болт</span>  </div>
+            <div class="input_block">
+                <input type="text" value="" class="inp_ob inp_rezba" placeholder="резьба">
+                <span>+</span>
+                <input type="text" value="" class="inp_ob inp_length" placeholder="длина">
+                <span> = </span>
+                <span class="res"></span>
+
+            </div>
+
             <select class='select_one select' name="select_one" id="select_one" onchange="selectChangeOne()">
                 <option class="select_item" value="неопределено" >стандарты и альтернативы</option>
                 <option class="select_item" value="DIN 933">DIN 933</option>
@@ -68,6 +74,7 @@
                 Незаменимы в механизмах, требующих частой с
                 борки-разборки, грузоподъемных машинах и ответственных конструкциях.
             </p>
+            <button class="btn btn_reload">Очистить</button>
             <button class="btn_save hidden">Создать</button>
         </div>
     
@@ -83,7 +90,7 @@
                 <div class="form_item">Сталь:<span class="item steel"></span></div>
     
                 <div class="btn_block">
-                    <button class="btn arrow_back">Дополнить</button>
+                    <button class="btn arrow_back">Назад</button>
                     <button class="btn save_card">Сохранить карточку</button>
                 </div>
             </div>
