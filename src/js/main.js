@@ -1,5 +1,5 @@
 let reload = document.querySelector('.btn_reload')
-let inp_rezba = document.querySelector('.inp_rezba')
+let inp_thread = document.querySelector('.inp_thread')
 let inp_length = document.querySelector('.inp_length')
 let liste = document.querySelector('.liste')
 let res = document.querySelector('.res')
@@ -10,14 +10,10 @@ reload.addEventListener('click', ()=>{
     location.reload()
 })
 
-
-
-
 function selectChangeOne() {
     let select = document.querySelector('.select_one').value   
     return select
 }
-
 function selectChangeTwo() {
     let select = document.querySelector('.select_two').value
     return select
@@ -32,7 +28,7 @@ function selectChangeFour() {
 }
 
 function num_one() {
-    let num1 = Number(inp_rezba.value);
+    let num1 = Number(inp_thread.value);
     let num2 = Number(inp_length.value)
     let m = 'M'
     let name = m.concat(num1).concat('x').concat(num2)
@@ -41,11 +37,6 @@ function num_one() {
         'thread': num1,
         'length': num2,
     }
-    // if (num2  1) {
-    //     console.log('введите длину');
-    // } else {
-    //     res.innerHTML = name
-    // }
     if (num1 > 0 && num2 > 0) {
         res.innerHTML = name
         // reload.classList.add('hidden')
